@@ -1,6 +1,10 @@
-#titleScreen {
-    margin: auto;
-    width: 50%;
-    padding: 10px;
+#titleScreen, #gameScreen, #settingsScreen, #creditsScreen {
+    display: none;
     text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+
+#titleScreen {
+    display: block; /* Show only title screen on start */
 }

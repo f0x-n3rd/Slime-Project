@@ -4,24 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Slime Project</title>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.88.2/dist/phaser.js"></script>
+    <title>slime.io</title>
 </head>
 <body>
     <!--Title Screen-->
-        <div id="titleScreen">
-            <h1>Welcome to the Slime Project!</h1>
-            <p>A web game/application that may or may not involve slimes at all!</p>
-            <button id="startButton">Play</button><br>
-            <button id="settingsButton">Settings</button><br>
-            <button id="creditsButton">Credits</button>
-        </div>
+    <div id="titleScreen">
+        <h1>Welcome to the Slime Project!</h1>
+        <p>A web game/app that may or may not involve slimes at all!</p>
+        <button class="screenButton" data-screen="gameScreen">Play</button><br>
+        <button class="screenButton" data-screen="settingsScreen">Settings</button><br>
+        <button class="screenButton" data-screen="creditsScreen">Credits</button>
+    </div>
 
     <!--Main Game Screen-->
-        <div id="gameScreen" display="none">
-        </div>
+    <div id="gameScreen">
+        <button class="screenButton" data-screen="titleScreen">Back</button>
+    </div>
 
     <!--Settings Screen-->
-        <div id="settingsScreen" display="none">
-        </div>
+    <div id="settingsScreen">
+        <button class="screenButton" data-screen="titleScreen">Back</button>
+    </div>
+
+    <!--Credits Screen-->
+    <div id="creditsScreen">
+        <button class="screenButton" data-screen="titleScreen">Back</button>
+    </div>
+
+    <script src="interface.js"></script>
+    <script src="game.js"></script>
 </body>
 </html>
